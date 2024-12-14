@@ -4,6 +4,7 @@
 }
 
 * {
+  scroll-behavior: smooth;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -52,6 +53,12 @@ body {
   display: inline-block;
   font-size: 1rem;
   margin: 0 0.5rem;
+  opacity: 0.8;
+}
+
+.navbar-nav a.active {
+  color: var(--primary);
+  font-weight: bold;
 }
 
 .navbar .navbar-nav a:hover {
@@ -152,18 +159,26 @@ body {
 
 .tentang h2{
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin-bottom: 3rem;
+  color: var(--primary);
 }
 
 .tentang h2 span{
-  color: var(--primary);
+  font-family: 'Poppins', sans-serif;
+  font-style: italic;
+  color: #fff;
 }
+
+.tentang .row {
+  display: flex;
+}
+
 /* Media Queries */
 /* Tablet */
 @media (max-width: 1000px) {
   html {
-    font-size: 68%;
+    font-size: 70%;
   }
 
 }
@@ -175,27 +190,42 @@ body {
   #menu {
     display: inline-block;
   }
+
+  .navbar {
+    background-color: rgba(1, 1, 1, 0.6);
+  }
   .navbar .navbar-nav {
     position: absolute;
     top: 100%;
-    right: -100%;
-    background-color: #fff;
+    right: -1000%;
+    background-image: url(image/side.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
     width: 30rem;
     height: 100vh;
-    transition: 0.35s;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-extra {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .navbar .navbar-nav.active {
     right: 0;
   }
-  .navbar .navbar-nav a{
-    color:var(--bg);
+  .navbar .navbar-nav a{ 
+    color: #fff;
+    opacity: .8;
     display: block;
     margin: 1.5rem;
     padding: 0.5rem;
     font-size: 2rem;
   }
   .navbar .navbar-nav a:hover{
-    color: #6b4a30;
+    color: var(--primary);
+    opacity: 1;
   }
   .navbar .navbar-nav a::after{
     transform-origin: 0 0;
@@ -203,6 +233,20 @@ body {
   }
   .navbar .navbar-nav a:hover::after {
     transform: scaleX(0.25);
+    transition: 0.3s linear;
+  }
+  .hero .content {
+    max-width: 40rem;
+  }
+  .hero .content p{
+    max-width: 90%;
+  }
+  .tentang {
+    padding: 7rem 7% 1.4rem;
+  }
+  .tentang h2{
+    font-size: 2.5rem;
   }
 }
+
 
