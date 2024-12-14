@@ -18,6 +18,10 @@
     />
     <!-- Icons -->
     <script src="https://unpkg.com/feather-icons"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
     <!-- Styles -->
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -25,12 +29,10 @@
     <!-- Navbar Start -->
     <nav class="navbar">
       <a href="#" class="navbar-logo">LOGATRAM<span>VI</span></a>
-
       <div class="navbar-nav">
         <a href="#beranda">Beranda</a>
         <a href="#tentang">Tentang</a>
-        <a href="#timeline">Timeline</a>
-        <a href="#bidanglomba">Bidang Lomba</a>
+        <a href="#matalomba">Mata Lomba</a>
         <a href="#keuntungan">Keuntungan</a>
         <a href="#kontak">Kontak</a>
       </div>
@@ -43,14 +45,16 @@
       <main class="content">
         <h1>Kisah Kita: Dari Tenda ke Panggung Dunia</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta porro
-          quos eligendi numquam quia veritatis amet nihil id architecto sequi.
+          Loka Galang Terampil Season VI Tingkat SMP/MTs/Sederajat Se-Kabupaten
+          Jember Terbuka Hadir Kembali Pada 2025. Yuk Buruan Daftar Sebelum
+          Kehabisan Kuota !!
         </p>
         <a href="#" class="cta">Daftar Sekarang</a>
       </main>
     </section>
 
     <!-- Tentang Logatram -->
+    <!--
     <section class="tentang" id="tentang">
       <h2>Tentang <span>LOGATRAM</span></h2>
       <div class="row">
@@ -67,14 +71,79 @@
           </p>
         </div>
       </div>
+    </section> 
+    -->
+    <section class="matalombas" id="matalomba">
+      <div class="matlom">
+        <h2>MATA <span>Lomba</span></h2>
+      </div>
     </section>
-
-    <section class="bidanglomba" id="bidanglomba"></section>
+    <section class="matalomba" id="matalomba">
+      <div class="owl-carousel owl-theme">
+        <div class="container">
+          <div class="card">
+            <div class="img-box">
+              <img src="image/yel.jpg" alt="" />
+            </div>
+            <div class="content">
+              <h2>YEL-YEL PANGKALAN</h2>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque
+                earum error quasi. Reiciendis nulla, obcaecati veritatis
+                corrupti doloremque rerum inventore.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="card">
+            <div class="img-box">
+              <img src="image/yel.jpg" alt="" />
+            </div>
+            <div class="content">
+              <h2>YEL-YEL PANGKALAN</h2>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque
+                earum error quasi. Reiciendis nulla, obcaecati veritatis
+                corrupti doloremque rerum inventore.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="card">
+            <div class="img-box">
+              <img src="image/yel.jpg" alt="" />
+            </div>
+            <div class="content">
+              <h2>YEL-YEL PANGKALAN</h2>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque
+                earum error quasi. Reiciendis nulla, obcaecati veritatis
+                corrupti doloremque rerum inventore.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- Feather Icons -->
     <script>
       feather.replace();
     </script>
     <!-- script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="script.js"></script>
+    <script>
+      $(function () {
+        $(".owl-carousel").owlCarousel({
+          loop: true,
+          margin: 10,
+          nav: true,
+          responsive: {},
+        });
+      });
+    </script>
   </body>
 </html>
